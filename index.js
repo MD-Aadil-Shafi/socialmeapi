@@ -10,6 +10,7 @@ const mongoSanitize = require('express-mongo-sanitize')
 const xss = require('xss-clean')
 const rateLimit = require('express-rate-limit')
 const fileUpload = require('express-fileupload')
+const dbConnect = require('./utils/db')
 
 //custom errorHandler => use below routes
 const errorHandler = require('./middleware/error')
@@ -18,7 +19,9 @@ const errorHandler = require('./middleware/error')
 require('./socket/index')
 
 //connecting to db 
-require('./utils/db')
+
+//connect db
+dbConnect()
 
 const app = express()
 app.use(cors());
