@@ -4,7 +4,6 @@
   "description": "social media app api by Mohd Aadil Shafi",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node index.js"
   },
   "author": "Aadil",
