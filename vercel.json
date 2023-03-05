@@ -1,6 +1,6 @@
 {
     "version": 2,
-    "name": "socialmeapi",
+    "name": "adl-socialmeapi",
     "builds": [
       {
         "src": "index.js",

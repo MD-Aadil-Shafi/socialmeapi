@@ -20,8 +20,6 @@ require('./socket/index')
 
 //connecting to db 
 
-//connect db
-dbConnect()
 
 const app = express()
 app.use(cors());
@@ -31,6 +29,10 @@ app.use(fileUpload({
     // debug: true
     //use temp folder instead of RAM
 }))
+
+//connect db
+dbConnect()
+
 
 //cloudinary config
 cloudinary.config({
@@ -84,7 +86,7 @@ app.use('/api/v1/notification', notifyRouter);
 app.use(errorHandler);
 
 
-const port = process.env.PORT || 5000;
+const port = process.env.PORT || 4000;
 const server = app.listen(port,  ()=>{
     console.log('server running on port',port)
 })
