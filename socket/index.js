@@ -23,7 +23,7 @@ const getUser =(userId)=>{
 }
 
 io.on("connection", (socket)=>{
-    // console.log("a user connected.")
+    console.log("a user connected.")
     //io.emit()=> for all connected user
     //io.emit("TestEventName","Welcome to Socket Server.")
 
@@ -46,7 +46,7 @@ io.on("connection", (socket)=>{
 
     //removing user on disconnecting
     socket.on("disconnect", ()=>{
-        // console.log('a user disconnected');
+        console.log('a user disconnected');
         removeUser(socket.id);
     })
 })
