@@ -1,4 +1,6 @@
-const io = require('socket.io')(8000,{
+require('dotenv').config()
+const sport = process.env.PORT || 4000
+const io = require('socket.io')(sport,{
     cors:{
         origin:"*",
     }
